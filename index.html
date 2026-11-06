@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NikeBoss System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #060608;
+            --card: #0E0A0D;
+            --accent: #FF1F3D;
+            --text: #F0E8EA;
+            --dim: #8A7A80;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: 
+                linear-gradient(rgba(255, 31, 61, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 31, 61, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            font-style: italic;
+            background: linear-gradient(90deg, #FF1F3D, #FF6B81);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--dim);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .subtitle span {
+            display: block;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            background-color: var(--card);
+            padding: 16px 20px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 16px;
+            border: 1px solid rgba(255, 31, 61, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 20px rgba(255, 31, 61, 0.2);
+        }
+
+        .link-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background-color: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .link-btn:hover::before {
+            opacity: 1;
+        }
+
+        .icon {
+            margin-right: 16px;
+            font-size: 24px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--dim);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">NikeBoss</div>
+        <div class="subtitle">
+            <span>👾 Разработчик из Казани</span>
+            <span>🔒 Твой проводник в безопасный интернет</span>
+            <span>🚀 Строю NikeBossSystem</span>
+        </div>
+
+        <div class="links">
+            <a href="https://t.me/nikebossnews" class="link-btn" target="_blank">
+                <span class="icon">📢</span> Telegram канал
+            </a>
+            <a href="https://max.ru/join/Y-vUS6AlqhAHKUvSKhD2BFezl64wPetIiruH86QgV_g" class="link-btn" target="_blank">
+                <span class="icon">💬</span> Max Messenger
+            </a>
+            <a href="https://www.instagram.com/nikeboss320" class="link-btn" target="_blank">
+                <span class="icon">📸</span> Instagram
+            </a>
+            <a href="https://t.me/NikeBossVPN_bot" class="link-btn" target="_blank">
+                <span class="icon">🛡️</span> NikeBoss VPN
+            </a>
+        </div>
+
+        <div class="footer">
+            NikeBoss System © 2026
+        </div>
+    </div>
+
+</body>
+</html>
